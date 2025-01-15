@@ -6,5 +6,6 @@ permalink: /index
   <head></head>
   <body>
     <img src="monsterbash.svg"/>
+    Updated
   </body>
 </html>
