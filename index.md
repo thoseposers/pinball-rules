@@ -3,7 +3,13 @@ title: "Landing Page"
 permalink: /index
 
 <html>
-  <head></head>
+  <head>
+    <script
+			  src="https://code.jquery.com/jquery-3.7.1.min.js"
+			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+			  crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> 
+  </head>
   <body>
   <object data="monsterbash.svg" type="image/svg+xml" id="playfield" width="100%" height="100%"></object>
     
@@ -35,11 +41,7 @@ permalink: /index
     </div>
         
     Updated
-    <script
-			  src="https://code.jquery.com/jquery-3.7.1.min.js"
-			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-			  crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> 
+
     <script type="text/javascript">
       $(document).ready(function () {
         let playfield = document.getElementById('playfield');
