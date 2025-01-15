@@ -42,6 +42,8 @@ permalink: /index
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> 
     <script type="text/javascript">
       let playfield = document.getElementById('playfield');
+      let svgDoc = playfield.contentDocument;
+      let monsterInstruments = svgDoc.getElementById("MonsterInstruments");
     </script>
   </body>
 </html>
