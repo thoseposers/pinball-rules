@@ -5,6 +5,6 @@ permalink: /index
 <html>
   <head></head>
   <body>
-    <img src="/monsterbash.svg"/>
+    <img src="monsterbash.svg"/>
   </body>
 </html>
