@@ -41,10 +41,16 @@ permalink: /index
 			  crossorigin="anonymous"></script>
     <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script> 
     <script type="text/javascript">
-      let playfield = document.getElementById('playfield');
-      let svgDoc = playfield.contentDocument;
-      let monsterInstruments = svgDoc.getElementById("MonsterInstruments");
-      monsterInstruments.addEventListener("click", MicroModal.show('modal-1'));
+      $(document).ready(function () {
+        let playfield = document.getElementById('playfield');
+        let svgDoc = playfield.contentDocument;
+        let monsterInstruments = svgDoc.getElementById("MonsterInstruments");
+        monsterInstruments.addEventListener("click", test());
+      });
+      
+      function test(){
+        let i = 1;
+      }
     </script>
   </body>
 </html>
