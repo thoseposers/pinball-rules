@@ -5,7 +5,7 @@ permalink: /index
 <html>
   <head></head>
   <body>
-    <img id="playfield" src="monsterbash.svg"/>
+  <object data="monsterbash.svg" type="image/svg+xml" id="playfield" width="100%" height="100%"></object>
     
     <!-- [1] -->
     <div id="modal-1" aria-hidden="true">
