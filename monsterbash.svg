@@ -25,4 +25,5 @@
        id="CreatureFeatureRamp" /><path
        style="fill:none;stroke-width:0.0627051"
        d="m 77.430315,220.76653 c 0,0 3.355392,18.60717 19.827316,18.30214 16.471929,-0.30504 20.437389,-17.9971 20.437389,-17.9971 l 20.5899,24.40284 -39.959662,27.14818 -45.297799,-26.84314 z"
-       id="MonsterInstruments" /></g></svg>
+       id="MonsterInstruments"
+       onclick="MicroModal.show('modal-1');" /></g></svg>
