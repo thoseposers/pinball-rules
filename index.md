@@ -44,6 +44,7 @@ permalink: /index
       let playfield = document.getElementById('playfield');
       let svgDoc = playfield.contentDocument;
       let monsterInstruments = svgDoc.getElementById("MonsterInstruments");
+      monsterInstruments.onclick = function(){MicroModal.show('modal-id');};
     </script>
   </body>
 </html>
