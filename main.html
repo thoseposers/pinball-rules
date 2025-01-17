@@ -2,77 +2,24 @@
 <html>
   <head>
     <style>
-                      svg path {
-                cursor: pointer;
-                }
+      #svg1 {
+        width: 100% !important;
+        height: 100vh !important;
+      }
 
-                .featureHover {
-                fill: rgba(0,0,0,50) !important;
-                fill-opacity: 25% !important;
-                }
+      svg path {
+        cursor: pointer;
+      }
+
+      .featureHover {
+        fill: rgba(0,0,0,50) !important;
+        fill-opacity: 25% !important;
+      }        
     </style>
-    <style>
-      .micromodal {
-        display: none;
-      }
-  
-      .micromodal.is-open {
-        display: block;
-      }
-  
-      .micromodal__overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: rgba(0,0,0,0.65);
-      }
-  
-      .micromodal__container {
-        box-sizing: border-box;
-        overflow-y: auto;
-        max-width: 500px;
-        max-height: 100vh;
-        padding: 30px;
-        background-color: #fff;
-        border-radius: 4px;
-      }
-  
-      .micromodal[aria-hidden="false"] .micromodal__overlay {
-        animation: microModalFadeIn .2s cubic-bezier(0.0, 0.0, 0.2, 1);
-      }
-  
-      .micromodal[aria-hidden="false"] .micromodal__container {
-        animation: microModalSlideIn .2s cubic-bezier(0, 0, .2, 1);
-      }
-  
-      .micromodal .micromodal__container,
-      .micromodal .micromodal__overlay {
-        will-change: transform;
-      }
-  
-      @keyframes microModalFadeIn {
-          from { opacity: 0; }
-            to { opacity: 1; }
-      }
-  
-      @keyframes microModalSlideIn {
-        from { transform: translateY(15%); }
-          to { transform: translateY(0); }
-      }
-    </style>
-    <script
-			  src="https://code.jquery.com/jquery-3.7.1.min.js"
-			  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-			  crossorigin="anonymous"></script>
-    
-  
+    <link rel="stylesheet" href="bottom sheet/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
   </head>
-  <body style="height: 100%;width: 100%;margin: 0;">
+  <body style="margin: 0;">
 
 
     <svg
@@ -257,32 +204,26 @@
            style="fill:#000000;fill-opacity:0;stroke:#000000;stroke-width:0.963001;stroke-dasharray:none;stroke-opacity:1"
            d="m 147.4507,248.20786 -3.31596,-40.6512 c 0,0 -1.10532,-5.64941 1.8422,-5.5266 2.94752,0.12281 5.28097,0.12281 5.5266,3.80721 0.24562,3.6844 2.94752,44.08997 2.94752,44.08997 z"
            id="SpecialOutlane-Right"
-           onclick="MicroModal.show('Special');" /></g></svg>
+           onclick="LoadFeatureToBottomSheet('DracAttack');" /></g></svg>
     
     
     
+           <div class="bottom-sheet">
+             <div class="sheet-overlay"></div>
+             <div class="content">
+               <div class="header">
+                 <div class="drag-icon"><span></span></div>
+               </div>
+               <div class="body">
+                <div id="content"></div>
+               </div>
+             </div>
+           </div>
     
 
     
-    <div class="micromodal" id="DracAttack" aria-hidden="true">
-      <div class="micromodal__overlay" tabindex="-1" data-micromodal-close>
-        <div class="micromodal__container" role="dialog" aria-modal="true" aria-labelledby="DracAttack-title">
-          <button aria-label="Close modal" data-micromodal-close>X</button>
-          <p>Spell DRACULA by hitting either of his red 2-target target banks seven times to spell his name. </p>
-          <p>The first three letters will already be lit at the start of a game. Begin the mode by shooting the center sinkhole. </p>
-          <p>Defeat Dracula by repeatedly hitting the moving Dracula figurine. </p>
-          <p>The player has 30 seconds to score each hit and the reward for attacking Dracula is 1 million points plus 250,000 points times the number of times he was previously hit during this mission attempt plus another 250,000 points times the number of times this mission was previously beaten.</p>
-          <p>Defeating Dracula will award his guitar.</p>
-        </div>
-      </div>
-    </div>
-    <script src="https://unpkg.com/micromodal/dist/micromodal.min.js"></script>
     <script>
-      MicroModal.init();
-
       (function() {
-        let i = $( "path" );
-
         const test = document.getElementsByTagName("path");
 
         // This handler will be executed only once when the cursor
@@ -295,10 +236,13 @@
               event.target.classList.add('featureHover');
 
               let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
-              let relatedFeaturesList = $("[id^=" + featurePrefix + "]").toArray();
-              relatedFeaturesList.forEach(element => {
-                element.classList.add('featureHover');
-              });
+              if (featurePrefix == "") {
+                return;
+              }
+              let relatedFeaturesList = $("[id^=" + featurePrefix + "]");
+              for (let featureIndex = 0; featureIndex < relatedFeaturesList.length; featureIndex++) {
+                const element = relatedFeaturesList[featureIndex].classList.add('featureHover');
+              }
             },
             false,
           );
@@ -310,10 +254,13 @@
               event.target.classList.remove('featureHover');
 
               let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
-              let relatedFeaturesList = $("[id^=" + featurePrefix + "]").toArray();
-              relatedFeaturesList.forEach(element => {
-                element.classList.remove('featureHover');
-              });
+              if (featurePrefix == "") {
+                return;
+              }
+              let relatedFeaturesList = $("[id^=" + featurePrefix + "]");
+              for (let featureIndex = 0; featureIndex < relatedFeaturesList.length; featureIndex++) {
+                const element = relatedFeaturesList[featureIndex].classList.remove('featureHover');
+              }
             },
             false,
           );
@@ -321,6 +268,29 @@
 
       })();
 
+      function LoadFeatureToBottomSheet(featureName){
+        // URL of the page you want to load
+      const url = `featureContent/${featureName}.html`;
+      
+      // Use the fetch API to load the page content
+      fetch(url).then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(data => {
+          // Inject the HTML content into the div with id 'content'
+          document.getElementById('content').innerHTML = data;
+          showBottomSheet();
+        })
+        .catch(error => {
+          console.error('There was a problem with the fetch operation:', error);
+        });
+      }
+
+
     </script> 
+    <script src="bottom sheet/script.js"></script>
   </body>
 </html>
