@@ -19,30 +19,14 @@
       fill-opacity: 25% !important;
     }
   </style>
-  <link rel="stylesheet" href="Navigation/styles.css">
   <link rel="stylesheet" href="bottom sheet/style.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 
 <body style="margin: 0;">
-  <header class="header">
-    <div class="nav-container">
-      <span class="logo">Monster Bash</span>
-      <nav class="nav">
-        <ul class="nav--ul__one">
-          <li class="nav-link"><a href="#">Modes</a></li>
-          <li class="nav-link"><a href="#">Multiballs</a></li>
-        </ul>
-        <!--<ul class="nav--ul__two">
-          <li class="nav-link"><a href="#">Login</a></li>
-          <li class="nav-link"><a href="#">Signup</a></li>
-        </ul> -->
-      </nav>
-      <span class="hamburger-menu  material-symbols-outlined">menu</span>
-    </div>
-  </header>
-  <div class="page-content">
+  
+
 
 
 
@@ -185,7 +169,6 @@
       </g>
     </svg>
 
-  </div>
   <div class="bottom-sheet">
     <div class="sheet-overlay"></div>
     <div class="content">
@@ -266,13 +249,6 @@
           console.error('There was a problem with the fetch operation:', error);
         });
     }
-
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    const nav = document.querySelector(".nav");
-
-    hamburgerMenu.addEventListener("click", () => {
-      nav.classList.toggle("active")
-    });
 
   </script>
   <script src="bottom sheet/script.js"></script>
