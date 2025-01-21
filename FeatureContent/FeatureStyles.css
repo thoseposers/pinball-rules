@@ -1,3 +1,8 @@
+.FeatureLink {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .FrankComesAlive {
     color: #4dc040ff;
 }
