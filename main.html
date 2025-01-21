@@ -47,6 +47,7 @@
     }
 
     /* Style navigation menu links */
+    .topnav span,
     .topnav a {
       color: white;
       padding: 25px 25px;
@@ -65,7 +66,9 @@
     }
 
     /* Add a grey background color on mouse-over */
+    .topnav span:hover,
     .topnav a:hover {
+      cursor: pointer;
       background-color: #ddd;
       color: black;
     }
@@ -93,7 +96,7 @@
     <div class="topnavTitle">Logo</div>
     <!-- Navigation links (hidden by default) -->
     <div id="myLinks">
-      <a href="#news">Modes</a>
+      <span onclick="LoadFeatureToBottomSheet('Modes');">Modes</span>
       <a href="#contact">Multiballs</a>
     </div>
     <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
