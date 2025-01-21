@@ -57,6 +57,7 @@ body {
   background: #000;
 }
 .bottom-sheet .content {
+  font-size: 45px;
   width: 100%;
   position: relative;
   background: #fff;
