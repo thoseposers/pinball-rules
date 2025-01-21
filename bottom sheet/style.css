@@ -106,6 +106,9 @@ body {
 .bottom-sheet .body::-webkit-scrollbar {
   width: 0;
 }
+.bottom-sheet .body h1 {
+  font-size: 1em;
+}
 .bottom-sheet .body h2 {
   font-size: 1.8rem;
 }
