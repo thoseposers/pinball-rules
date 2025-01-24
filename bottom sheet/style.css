@@ -107,12 +107,12 @@ body {
   width: 0;
 }
 .bottom-sheet .body h1 {
-  font-size: 1.5rem;
+  font-size: 45px;
 }
 .bottom-sheet .body h2 {
   font-size: 1.25rem;
 }
-.bottom-sheet .body {
+.bottom-sheet .body .content p {
   margin-top: 20px;
-  font-size: 1.05rem;
+  font-size: 40px;
 }
