@@ -106,13 +106,13 @@ body {
 .bottom-sheet .body::-webkit-scrollbar {
   width: 0;
 }
-.bottom-sheet .body h1 {
+.bottom-sheet .body #content h1 {
   font-size: 45px;
 }
-.bottom-sheet .body h2 {
+.bottom-sheet .body #content h2 {
   font-size: 1.25rem;
 }
-.bottom-sheet .body .content p {
+.bottom-sheet .body #content p {
   margin-top: 20px;
-  font-size: 40px;
+  font-size: 25px;
 }
