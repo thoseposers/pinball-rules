@@ -112,7 +112,7 @@ body {
 .bottom-sheet .body #content h2 {
   font-size: 1.25rem;
 }
-#bottom-sheet-content p {
+#bottom-sheet-content p, ul {
   margin-top: 20px;
   font-size: 18px;
 }
