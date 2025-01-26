@@ -18,6 +18,10 @@
   display: block;
 }
 
+.topnavTitle img {
+  max-height: 59px;
+}
+
 /* Style navigation menu links */
 .topnav span,
 .topnav a {
