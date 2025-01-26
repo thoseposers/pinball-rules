@@ -112,6 +112,13 @@ body {
   border-radius: 50px;
 }
 
+@media (max-width: 1000px) {
+  .header .drag-icon span {
+    height: 15px;
+    width: 75px;
+  }
+}
+
 .bottom-sheet .body {
   height: 100%;
   overflow-y: auto;
