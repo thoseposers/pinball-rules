@@ -17,3 +17,7 @@ The Interactive Pinball Rules System is intended to make the process of learning
 ## Contributing
 
 With so many pinball tables available, it's impossible for one person to cover them all, so every contribution is greatly appreciated.
+
+## Games List
+
+[Monster Bash](https://thoseposers.github.io/pinball-rules/Tables/MonsterBash/main)
