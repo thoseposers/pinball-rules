@@ -1,0 +1,20 @@
+#svg1 {
+    width: 100% !important;
+    height: 100vh !important;
+}
+
+@media (max-width: 1000px) {
+    #svg1 {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+svg path {
+    cursor: pointer;
+}
+
+.featureHover {
+    fill: rgba(0, 0, 0, 50) !important;
+    fill-opacity: 25% !important;
+}

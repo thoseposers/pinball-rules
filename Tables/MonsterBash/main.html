@@ -5,81 +5,11 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <style>
-    #svg1 {
-      width: 100% !important;
-      height: 100vh !important;
-    }
 
-    @media (max-width: 1000px) {
-      #svg1 {
-        width: 100% !important;
-        height: 100% !important;
-      }
-    }
-
-    svg path {
-      cursor: pointer;
-    }
-
-    .featureHover {
-      fill: rgba(0, 0, 0, 50) !important;
-      fill-opacity: 25% !important;
-    }
-
-    /* Style the navigation menu */
-    .topnav {
-      overflow: hidden;
-      background-color: #333;
-      position: relative;
-    }
-
-    /* Hide the links inside the navigation menu (except for logo/home) */
-    .topnav #myLinks {
-      display: none;
-    }
-
-    .topnavTitle {
-      color: white;
-      padding: 25px 25px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    /* Style navigation menu links */
-    .topnav span,
-    .topnav a {
-      color: white;
-      padding: 25px 25px;
-      text-decoration: none;
-      font-size: 17px;
-      display: block;
-    }
-
-    /* Style the hamburger menu */
-    .topnav a.icon {
-      background: black;
-      display: block;
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-
-    /* Add a grey background color on mouse-over */
-    .topnav span:hover,
-    .topnav a:hover {
-      cursor: pointer;
-      background-color: #ddd;
-      color: black;
-    }
-
-    /* Style the active link (or home/logo) */
-    .active {
-      background-color: #04AA6D;
-      color: white;
-    }
   </style>
-  <link rel="stylesheet" href="../../bottom sheet/style.css">
+  <link rel="stylesheet" href="../../global/bottomsheet/style.css">
+  <link rel="stylesheet" href="../../global/menu/style.css">
+  <link rel="stylesheet" href="../../global/style.css">
   <link rel="stylesheet" href="FeatureContent/FeatureStyles.css">
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -485,85 +415,9 @@
   </div>
 
 
-
-  <script>
-    (function () {
-      const test = document.getElementsByTagName("path");
-
-      // This handler will be executed only once when the cursor
-      // moves over the unordered list
-      for (let index = 0; index < test.length; index++) {
-        test[index].addEventListener(
-          "mouseenter",
-          (event) => {
-            // highlight the mouseenter target
-            event.target.classList.add('featureHover');
-
-            let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
-            if (featurePrefix == "") {
-              return;
-            }
-            let relatedFeaturesList = $("[id^=" + featurePrefix + "]");
-            for (let featureIndex = 0; featureIndex < relatedFeaturesList.length; featureIndex++) {
-              const element = relatedFeaturesList[featureIndex].classList.add('featureHover');
-            }
-          },
-          false,
-        );
-
-        test[index].addEventListener(
-          "mouseleave",
-          (event) => {
-            // highlight the mouseenter target
-            event.target.classList.remove('featureHover');
-
-            let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
-            if (featurePrefix == "") {
-              return;
-            }
-            let relatedFeaturesList = $("[id^=" + featurePrefix + "]");
-            for (let featureIndex = 0; featureIndex < relatedFeaturesList.length; featureIndex++) {
-              const element = relatedFeaturesList[featureIndex].classList.remove('featureHover');
-            }
-          },
-          false,
-        );
-      }
-
-    })();
-
-    function LoadFeatureToBottomSheet(featureName) {
-      // URL of the page you want to load
-      const url = `FeatureContent/${featureName}`;
-
-      // Use the fetch API to load the page content
-      fetch(url).then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.text();
-      })
-        .then(data => {
-          // Inject the HTML content into the div with id 'content'
-          document.getElementById('bottom-sheet-content').innerHTML = data;
-          showBottomSheet();
-        })
-        .catch(error => {
-          console.error('There was a problem with the fetch operation:', error);
-        });
-    }
-
-    /* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-    function toggleMenu() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
-    }
-  </script>
-  <script src="../../bottom sheet/script.js"></script>
+  <script src="../../global/bottomsheet/script.js"></script>
+  <script src="../../global/menu/script.js"></script>
+  <script src="../../global/script.js"></script>
 </body>
 
 </html>

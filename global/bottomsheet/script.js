@@ -37,7 +37,7 @@ const dragStart = (e) => {
 
 // Calculates the new height for the sheet content and call the updateSheetHeight function
 const dragging = (e) => {
-    if(!isDragging) return;
+    if (!isDragging) return;
     const delta = startY - (e.pageY || e.touches?.[0].pageY);
     const newHeight = startHeight + delta / window.innerHeight * 100;
     updateSheetHeight(newHeight);
