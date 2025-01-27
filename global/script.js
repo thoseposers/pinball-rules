@@ -10,7 +10,7 @@
                 // highlight the mouseenter target
                 event.target.classList.add('featureHover');
 
-                let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
+                let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-") + 1);
                 if (featurePrefix == "") {
                     return;
                 }
@@ -28,7 +28,7 @@
                 // highlight the mouseenter target
                 event.target.classList.remove('featureHover');
 
-                let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-"));
+                let featurePrefix = event.target.id.substring(0, event.target.id.indexOf("-") + 1);
                 if (featurePrefix == "") {
                     return;
                 }
