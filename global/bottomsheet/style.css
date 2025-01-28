@@ -65,7 +65,6 @@ body {
 }
 
 .bottom-sheet .content {
-  font-size: 45px;
   width: 100%;
   position: relative;
   background: #fff;
@@ -132,10 +131,6 @@ body {
 
 #bottom-sheet-content h1 {
   font-size: 25px;
-}
-
-.bottom-sheet .body #content h2 {
-  font-size: 1.25rem;
 }
 
 #bottom-sheet-content p,
