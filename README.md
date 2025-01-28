@@ -20,5 +20,5 @@ With so many pinball tables available, it's impossible for one person to cover t
 
 ## Games List
 
-[Monster Bash](https://thoseposers.github.io/pinball-rules/Tables/MonsterBash/main)
-[Seawitch](https://thoseposers.github.io/pinball-rules/Tables/Seawitch/main)
+- [Monster Bash](https://thoseposers.github.io/pinball-rules/Tables/MonsterBash/main)
+- [Seawitch](https://thoseposers.github.io/pinball-rules/Tables/Seawitch/main)
