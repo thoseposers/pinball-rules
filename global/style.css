@@ -27,3 +27,15 @@ svg path {
     fill: rgba(0, 0, 0, 50) !important;
     fill-opacity: 25% !important;
 }
+
+.github-link {
+    text-align: center;
+}
+
+.github-link a {
+    color: whitesmoke;
+}
+
+.github-link img {
+    height: 15px;
+}
