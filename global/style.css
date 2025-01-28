@@ -18,6 +18,11 @@ svg path {
     cursor: pointer;
 }
 
+.FeatureLink {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .featureHover {
     fill: rgba(0, 0, 0, 50) !important;
     fill-opacity: 25% !important;
