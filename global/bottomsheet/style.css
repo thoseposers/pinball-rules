@@ -129,6 +129,10 @@ body {
   width: 0;
 }
 
+#bottom-sheet-content {
+  height: 100%;
+}
+
 #bottom-sheet-content h1 {
   font-size: 25px;
 }
@@ -137,4 +141,16 @@ body {
 ul {
   margin-top: 20px;
   font-size: 18px;
+}
+
+@media (max-width: 1000px) {
+  #bottom-sheet-content h1 {
+    font-size: 40px;
+  }
+  
+  #bottom-sheet-content p,
+  ul {
+    margin-top: 20px;
+    font-size: 20px;
+  }
 }
