@@ -47,9 +47,10 @@ function LoadFeatureToBottomSheet(featureName) {
     // URL of the page you want to load
     const url = `FeatureContent/${featureName}`;
 
-    $('#bottom-sheet-content').load(url);
+    
     showBottomSheet();
 
+    $('#bottom-sheet-content').load(url);
     // Use the fetch API to load the page content
     /*fetch(url).then(response => {
         if (!response.ok) {
