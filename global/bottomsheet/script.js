@@ -3,7 +3,7 @@ const showModalBtn = document.querySelector(".show-modal");
 const bottomSheet = document.querySelector(".bottom-sheet");
 const sheetOverlay = bottomSheet.querySelector(".sheet-overlay");
 const sheetContent = bottomSheet.querySelector(".content");
-const dragIcon = bottomSheet.querySelector(".drag-icon");
+const dragIcon = bottomSheet.querySelector(".drag-header");
 
 // Global variables for tracking drag events
 let isDragging = false, startY, startHeight;

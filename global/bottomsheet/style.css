@@ -153,4 +153,12 @@ ul {
     margin-top: 20px;
     font-size: 35px;
   }
+
+  .bottom-sheet .header {
+    padding: 25px 0 5px 0;
+  }
+
+  .bottom-sheet .content {
+    padding: 0 30px 25px 30px;
+  }
 }
