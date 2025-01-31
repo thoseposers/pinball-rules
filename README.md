@@ -20,5 +20,6 @@ With so many pinball tables available, it's impossible for one person to cover t
 
 ## Games List
 
+- [Aztec](https://thoseposers.github.io/pinball-rules/Tables/Aztec/main)
 - [Monster Bash](https://thoseposers.github.io/pinball-rules/Tables/MonsterBash/main)
 - [Seawitch](https://thoseposers.github.io/pinball-rules/Tables/Seawitch/main)
