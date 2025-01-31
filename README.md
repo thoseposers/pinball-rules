@@ -1,9 +1,6 @@
-# Interactive Pinball Rules System
+# Interactive Pinball Rules System (IPRS)
 
 The Interactive Pinball Rules System is intended to make the process of learning individual pinball table features and rulesets easier. Just click on any inserts, ramps, or targets to see what they do.
-
-
-
 
 ## Features
 
@@ -17,6 +14,8 @@ The Interactive Pinball Rules System is intended to make the process of learning
 ## Contributing
 
 With so many pinball tables available, it's impossible for one person to cover them all, so every contribution is greatly appreciated.
+
+A template folder has been added as a beginning point for new tables. Step by step directions to use this to create a finished IPRS page will be added to the wiki in the future.
 
 ## Games List
 

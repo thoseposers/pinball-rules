@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+
+  </style>
+  <link rel="stylesheet" href="../../global/bottomsheet/style.css">
+  <link rel="stylesheet" href="../../global/menu/style.css">
+  <link rel="stylesheet" href="../../global/style.css">
+  <link rel="stylesheet" href="FeatureContent/FeatureStyles.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body style="margin: 0;">
+
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Top Navigation Menu -->
+  <div class="topnav">
+    <div class="topnavTitle"><img src="logo.jpg" alt="Game Title Logo"></div>
+    <!-- Navigation links (hidden by default) -->
+    <div id="myLinks">
+      <!-- <span onclick="toggleMenu();LoadFeatureToBottomSheet('FEATURENAME');">FEATURENAME</span> -->
+    </div>
+    <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+
+  <!-- Add SVG here-->
+
+  <p class="github-link"><a href="https://github.com/thoseposers/pinball-rules">View on GitHub <img src="../../global/github-brands-solid.svg"></a></p>
+
+  <div class="bottom-sheet">
+    <div class="sheet-overlay"></div>
+    <div class="content">
+      <div class="header drag-header">
+        <div class="drag-icon"><span></span></div>
+      </div>
+      <div class="body">
+        <div id="bottom-sheet-content"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="../../global/bottomsheet/script.js"></script>
+  <script src="../../global/menu/script.js"></script>
+  <script src="../../global/script.js"></script>
+</body>
+
+</html>
