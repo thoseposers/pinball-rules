@@ -19,6 +19,7 @@ A template folder has been added as a beginning point for new tables. Step by st
 
 ## Games List
 
+- [Alien Star](https://thoseposers.github.io/Interactive-Pinball-Rules-System/Tables/AlienStar/main)
 - [Aztec](https://thoseposers.github.io/Interactive-Pinball-Rules-System/Tables/Aztec/main)
 - [Monster Bash](https://thoseposers.github.io/Interactive-Pinball-Rules-System/Tables/MonsterBash/main)
 - [Seawitch](https://thoseposers.github.io/Interactive-Pinball-Rules-System/Tables/Seawitch/main)
