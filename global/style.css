@@ -40,33 +40,57 @@ svg path {
     height: 15px;
 }
 
-.blink {
+.blink {  
+    animation-name: blink; 
+    animation-duration: 1s; 
+    animation-iteration-count: infinite;
+    -webkit-animation-name: blink; 
+    -webkit-animation-duration: 1s; 
+    -webkit-animation-iteration-count: infinite;
     animation: blink 1s linear infinite;
 }
 
 @-webkit-keyframes blink {
-    25% {
-        backdrop-filter: brightness(200%);
+    from {
+        fill: white;
+        fill-opacity: 50%;
     }
     50% {
-        backdrop-filter: brightness(100%);
+        fill: white;
+        fill-opacity: 0%;
+    }
+    to {
+        fill: white;
+        fill-opacity: 50%;
     }
 }
 
 @-moz-keyframes blink {
-    25% {
-        backdrop-filter: brightness(200%);
+    from {
+        fill: white;
+        fill-opacity: 50%;
     }
     50% {
-        backdrop-filter: brightness(100%);
+        fill: white;
+        fill-opacity: 0%;
+    }
+    to {
+        fill: white;
+        fill-opacity: 50%;
     }
 }
 
 @keyframes blink {
-    25% {
-        backdrop-filter: brightness(200%);
+    from {
+        fill: white;
+        fill-opacity: 50%;
     }
     50% {
-        backdrop-filter: brightness(100%);
+        fill: white;
+        fill-opacity: 0%;
+    }
+    to {
+        fill: white;
+        fill-opacity: 50%;
     }
 }
