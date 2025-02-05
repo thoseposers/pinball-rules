@@ -144,6 +144,7 @@ body {
   vertical-align: middle;
   height: auto;
   cursor: pointer;
+  margin-left: 5px;
 }
 
 #bottom-sheet-content p,
