@@ -135,10 +135,13 @@ body {
 
 #bottom-sheet-content h1 {
   font-size: 25px;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #bottom-sheet-content img {
   width: 20px;
+  vertical-align: middle;
   height: auto;
   cursor: pointer;
 }
