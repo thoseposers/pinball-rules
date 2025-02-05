@@ -47,11 +47,14 @@ svg path {
 @keyframes blink {
     25% {
         opacity: 0.5;
+        backdrop-filter: brightness(200%);
     }
     50% {
         opacity: 0;
+        backdrop-filter: brightness(0%);
     }
     75% {
         opacity: 0.5;
+        backdrop-filter: brightness(200%);
     }
 }
