@@ -25,6 +25,8 @@ const updateSheetHeight = (height) => {
 const hideBottomSheet = () => {
     bottomSheet.classList.remove("show");
     document.body.style.overflowY = "auto";
+
+    ClearHighlightedFeatures();
 }
 
 // Sets initial drag position, sheetContent height and add dragging class to the bottom sheet
@@ -33,6 +35,8 @@ const dragStart = (e) => {
     startY = e.pageY || e.touches?.[0].pageY;
     startHeight = parseInt(sheetContent.style.height);
     bottomSheet.classList.add("dragging");
+
+    ClearHighlightedFeatures();
 }
 
 // Calculates the new height for the sheet content and call the updateSheetHeight function
@@ -49,7 +53,13 @@ const dragStop = () => {
     isDragging = false;
     bottomSheet.classList.remove("dragging");
     const sheetHeight = parseInt(sheetContent.style.height);
-    sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
+    //sheetHeight < 25 ? hideBottomSheet() : sheetHeight > 75 ? updateSheetHeight(100) : updateSheetHeight(50);
+    if (sheetHeight < 12) {
+        hideBottomSheet();
+    }
+    if (sheetHeight > 75) {
+        updateSheetHeight(100);
+    }
 }
 
 dragIcon.addEventListener("mousedown", dragStart);
@@ -62,3 +72,20 @@ document.addEventListener("touchend", dragStop);
 
 sheetOverlay.addEventListener("click", hideBottomSheet);
 // showModalBtn.addEventListener("click", showBottomSheet);
+
+function HighlightFeature(featureName) {
+    let featuresList = $("[id^=" + featureName + "-]");
+    for (let featureIndex = 0; featureIndex < featuresList.length; featureIndex++) {
+        const element = featuresList[featureIndex].classList.add('blink');
+    }
+
+    updateSheetHeight(12);
+}
+
+function ClearHighlightedFeatures() {
+    // Remove any highlighting as well
+    let blinkElements = document.querySelectorAll(".blink");
+    for (let blinkIndex = 0; blinkIndex < blinkElements.length; blinkIndex++) {
+        const element = blinkElements[blinkIndex].classList.remove('blink');
+    }
+}

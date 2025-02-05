@@ -41,29 +41,13 @@
         );
     }
 
+    
 })();
 
 function LoadFeatureToBottomSheet(featureName) {
     // URL of the page you want to load
     const url = `FeatureContent/${featureName}`;
-
-    
     showBottomSheet();
-
     $('#bottom-sheet-content').load(url);
-    // Use the fetch API to load the page content
-    /*fetch(url).then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.text();
-    })
-        .then(data => {
-            // Inject the HTML content into the div with id 'content'
-            document.getElementById('bottom-sheet-content').innerHTML = data;
-            showBottomSheet();
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        }); */
 }
+
