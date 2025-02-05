@@ -44,6 +44,24 @@ svg path {
     animation: blink 1s linear infinite;
 }
 
+@-webkit-keyframes blink {
+    25% {
+        backdrop-filter: brightness(200%);
+    }
+    50% {
+        backdrop-filter: brightness(100%);
+    }
+}
+
+@-moz-keyframes blink {
+    25% {
+        backdrop-filter: brightness(200%);
+    }
+    50% {
+        backdrop-filter: brightness(100%);
+    }
+}
+
 @keyframes blink {
     25% {
         backdrop-filter: brightness(200%);
