@@ -78,6 +78,15 @@ body {
   transition: 0.3s ease;
 }
 
+.darkmode .content {
+  background: #333;
+  color: #fff;
+}
+
+.darkmode .content .body #bottom-sheet-content img{
+  filter: invert(1);
+}
+
 .bottom-sheet.show .content {
   transform: translateY(0%);
 }
